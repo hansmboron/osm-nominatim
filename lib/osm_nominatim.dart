@@ -90,7 +90,7 @@ class Nominatim {
     }
     assert(limit > 0, 'Limit has to be greater than zero');
     assert(limit <= 50, 'Limit has to be smaller or equals than 50');
-    final uri = Uri.https(
+    final uri = Uri.http(
       host,
       '/search',
       {
@@ -221,7 +221,7 @@ class Nominatim {
       zoom >= 0 && zoom <= 18,
       'Zoom needs to be between 0 and 18',
     );
-    final uri = Uri.https(
+    final uri = Uri.http(
       host,
       '/reverse',
       {
